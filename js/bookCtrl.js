@@ -4,15 +4,13 @@ angular.module( 'devmtnTravel' ).controller( 'bookCtrl', function( $scope, mainS
 
   $scope.book = function(){
     var destinationId = $state.params.id;
-    for (var i = 0; i < $scope.travelInfo.length; i++){
-      if($scope.travelInfo[i].id == destinationId){
-        destination = $scope.travelInfo[i];
+    for (var i = 0; i < mainSrv.travelInfo.length; i++){
+      if(mainSrv.travelInfo[i].id == destinationId){
+        destination = mainSrv.travelInfo[i];
       }
     }
     return destination;
   };
-
-
 
 
 });
